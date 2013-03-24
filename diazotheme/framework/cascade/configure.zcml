@@ -1,8 +1,3 @@
-<configure
-    xmlns="http://namespaces.zope.org/zope"
-    xmlns:five="http://namespaces.zope.org/five"
-    i18n_domain="diazotheme.framework.cascade">
-
-  <five:registerPackage package="." initialize=".initialize" />
-
+<configure xmlns="http://namespaces.plone.org/plone">
+  <static directory="static" name="cascade-framework" type="theme" />
 </configure>

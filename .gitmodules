@@ -1,0 +1,3 @@
+[submodule "diazotheme/framework/cascade/static/cascade"]
+	path = diazotheme/framework/cascade/static/cascade
+	url = git://github.com/jslegers/cascadeframework.git
