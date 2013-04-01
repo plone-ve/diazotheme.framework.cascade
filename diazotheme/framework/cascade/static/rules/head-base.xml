@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules xmlns="http://namespaces.plone.org/diazo"
+         xmlns:css="http://namespaces.plone.org/diazo/css"
+         xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+         xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <!-- Head rules
+       ================================================================== -->
+  <!-- Attributes -->
+  <copy attributes="*" css:theme="html" css:content="html"/>
+
+  <!-- Get Plone favicons and touch icons. -->
+  <replace css:theme="link[href*='build-full.min.css']">
+      <link rel="stylesheet" type="text/css" media="all"
+            href="/++theme++cascade-framework/cascade/assets/css/cascade/production/build-full.min.css" />
+  </replace>
+  <replace css:theme="link[href*='site.css']">
+      <link rel="stylesheet" type="text/css" media="all"
+            href="/++theme++cascade-framework/cascade/assets/css/site.css" />
+  </replace>
+
+</rules>

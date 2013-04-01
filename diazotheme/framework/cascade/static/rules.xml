@@ -8,18 +8,36 @@
   <!-- The condition makes sure that theme is only applied when served in the 
        plone main_template. This is necessary for functional edit popups in 
        Tiny, for example. -->
-  <theme href="++theme++cascade-framework/examples/starter-template.html" 
+  <theme href="++theme++cascade-framework/cascade/template-centered-content.html" 
          css:if-content="#visual-portal-wrapper"/>
 
   <!-- Head rules
        ================================================================== -->
+  <xi:include href="++theme++cascade-framework/rules/head-base.xml"/>
 
   <!-- Body rules
        ================================================================== -->
+  <xi:include href="++theme++plone/rules/icon/default-32.xml"/>
+  <replace css:theme=".logo" css:content="#portal-logo"/>
 
+  <replace content="//*[@class='selected']/@class">
+      <xsl:attribute name="class">active</xsl:attribute>
+  </replace>
+  <copy css:theme=".col.nav" css:content="#portal-globalnav > li"/>
+
+  <replace theme="//h1"><xsl:copy-of select="//h1"/></replace>
+  <drop content="//h1"/>
+  
+  <xi:include href="++theme++cascade-framework/rules/columns.xml"/>
+  <copy css:theme=".site-body .cell > .col:nth-child(2)" content="//*[@id='portal-columns']/div"/>
+  
+  
   <!-- Place the content 
        .................................................................. -->
-  <drop css:theme-children="body"/>
-  <before css:theme-children="body" css:content-children="body"/>
-  
+  <!-- <drop css:theme-children="body"/>
+  <before css:theme-children="body" css:content-children="body"/> -->
+  <copy css:theme=".site-footer .nav" content="//*[@id='portal-siteactions']/li"/>
+  <replace css:theme=".powered-by">
+    <img src="++theme++plone/resources/img/default/icon-64.png" width="64" height="64"/>
+  </replace> 
 </rules>
