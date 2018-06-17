@@ -8,7 +8,7 @@
   <!-- The condition makes sure that theme is only applied when served in the 
        plone main_template. This is necessary for functional edit popups in 
        Tiny, for example. -->
-  <theme href="++theme++cascade-framework/cascade/template-centered-content.html" 
+  <theme href="/++theme++cascade-framework/cascade/template-centered-content.html"
          css:if-content="#visual-portal-wrapper"/>
 
   <!-- Head rules
@@ -17,7 +17,7 @@
 
   <!-- Body rules
        ================================================================== -->
-  <xi:include href="++theme++plone/rules/icon/default-32.xml"/>
+  <xi:include href="++framework++plone/rules/icon/default-32.xml"/>
   <replace css:theme=".logo" css:content="#portal-logo"/>
 
   <replace content="//*[@class='selected']/@class">
@@ -38,6 +38,6 @@
   <before css:theme-children="body" css:content-children="body"/> -->
   <copy css:theme=".site-footer .nav" content="//*[@id='portal-siteactions']/li"/>
   <replace css:theme=".powered-by">
-    <img src="++theme++plone/resources/img/default/icon-64.png" width="64" height="64"/>
+    <img src="++framework++plone/img/default/icon-64.png" width="64" height="64"/>
   </replace> 
 </rules>
