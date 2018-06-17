@@ -25,7 +25,7 @@ Requirements
 Features
 ========
 
-- This support the *Cascade CSS* resources for version 1.2.
+- This support the *Cascade CSS* resources for version 1.0.
 - Included Diazo rules for the ``head``, ``portlets`` and ``structures`` *Cascade* CSS styles.
 
 
