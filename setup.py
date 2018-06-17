@@ -5,37 +5,19 @@ version = '1.0'
 
 setup(name='diazotheme.framework.cascade',
       version=version,
-      description="A Diazo framework implementation for the Cascade framework",
+      description="",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from
-      # https://pypi.org/pypi?:action=list_classifiers
+      # http://pypi.python.org/pypi?:action=list_classifiers
       classifiers=[
-        "Development Status :: 4 - Beta",
-        "Environment :: Web Environment",
         "Framework :: Plone",
-        "Framework :: Plone :: 4.1",
-        "Framework :: Plone :: 4.2",
-        "Framework :: Plone :: 4.3",
-        "Framework :: Plone :: Theme",
-        "Framework :: Zope2",
-        "Framework :: Zope3",
-        "Intended Audience :: Developers",
-        "Intended Audience :: End Users/Desktop",
-        "License :: OSI Approved :: BSD License",
-        "Operating System :: OS Independent",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 2.6",
-        "Programming Language :: Python :: 2.7",
-        "Topic :: Internet",
-        "Topic :: Software Development :: Libraries :: Python Modules",
         ],
-      keywords='web zope plone theme diazo cascade-css framework',
-      author='Thijs Jonkman',
-      author_email='t.jonkman@gmail.com',
-      maintainer='Leonardo Caballero',
-      maintainer_email='leonardocaballero@gmail.com',
-      url='https://github.com/TH-code/diazotheme.framework.cascade',
+      keywords='',
+      author='',
+      author_email='',
+      url='http://svn.plone.org/svn/collective/',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['diazotheme', 'diazotheme.framework'],
@@ -43,7 +25,6 @@ setup(name='diazotheme.framework.cascade',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          'diazoframework.plone',
           # -*- Extra requirements: -*-
       ],
       entry_points="""
