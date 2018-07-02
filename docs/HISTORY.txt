@@ -4,6 +4,11 @@ Changelog
 1.0dev (unreleased)
 -------------------
 
+- Fixed the 'Cannot add attributes to an element if children have 
+  been already added to the element.' error at body rules for 
+  selected class with a replace content directive
+  [macagua]
+
 - Fixed the names resources
   [macagua]
 

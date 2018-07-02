@@ -19,10 +19,11 @@
        ================================================================== -->
   <xi:include href="++framework++plone/rules/icon/default-32.xml"/>
   <replace css:theme=".logo" css:content="#portal-logo"/>
-
+  <!--
   <replace content="//*[@class='selected']/@class">
       <xsl:attribute name="class">active</xsl:attribute>
   </replace>
+  -->
   <copy css:theme=".col.nav" css:content="#portal-globalnav > li"/>
 
   <replace theme="//h1"><xsl:copy-of select="//h1"/></replace>
