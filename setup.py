@@ -11,7 +11,7 @@ setup(name='diazotheme.framework.cascade',
       # Get more strings from
       # https://pypi.org/pypi?:action=list_classifiers
       classifiers=[
-        "Development Status :: 4 - Beta",
+        "Development Status :: 3 - Alpha",
         "Environment :: Web Environment",
         "Framework :: Plone",
         "Framework :: Plone :: 4.1",
