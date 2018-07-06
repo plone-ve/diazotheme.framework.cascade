@@ -16,7 +16,75 @@ package for create Diazo_ theme using `plone.app.theming`_.
 
 ``diazotheme.framework.cascade`` package contains the following diazo implementations: 
 
-- **Cascade Starter Theme**, is the Twitter Bootstrap starter theme on diazo based.
+- **Cascade Starter Theme**, is the Cascade Starter theme on diazo based.
+
+
+How to create a child theme
+---------------------------
+
+Any of the three theme folders can be used to create your own child theme, 
+based on `diazotheme.framework.cascade`_. You can either wrap the theme up in a package 
+or you can create a zip file of the folder and upload that to the theme panel.
+
+There are two ways of creating a child theme.
+
+
+The package way
+^^^^^^^^^^^^^^^
+
+For this example, lets assume we are creating a package called
+``diazotheme.newtheme`` and we will copy the ``static`` theme in this 
+package.
+
+1. Created the ``diazotheme.newtheme`` package (for instance through ``paster`` script).
+
+2. Copy ``diazotheme.framework.cascade/diazotheme/framework/cascade/static`` to
+   ``diazotheme.newtheme/diazotheme/newtheme/static`` (arbitrary
+   name).
+
+3. Add `<plone:static directory="static" name="newtheme" type="theme"/>`
+   to ``diazotheme.newtheme/diazotheme/newtheme/configure.zcml``.
+
+4. Change ``diazotheme.newtheme/diazotheme/newtheme/static/manifest.cfg``
+   to reflect the changes, so: ::
+
+        [theme]
+        title = New theme
+        description = Describe the new theme
+        rules = /++theme++newtheme/rules.xml
+        prefix = /++theme++newtheme
+        doctype = <!DOCTYPE html>
+        preview = preview.png
+
+
+The zip file way
+^^^^^^^^^^^^^^^^
+
+Again, lets assume we use the ``theme`` theme and we want to end up
+with the ``newtheme`` name.
+
+1. Copy ``diazotheme.framework.cascade/diazotheme/framework/cascade/static`` to your file system.
+
+2. Rename ``static`` to ``newtheme`` (the folder name will become the
+   theme name in the theme panel)
+
+3. Change ``newtheme/manifest.cfg``
+   to reflect the changes, so: ::
+
+        [theme]
+        title = New theme
+        description = Describe the new theme
+        rules = /++theme++newtheme/rules.xml
+        prefix = /++theme++newtheme
+        doctype = <!DOCTYPE html>
+        preview = preview.png
+
+4. Customize your theme.
+
+5. When you are finished customizing, create a zip archive of the 
+   ``newtheme`` folder.
+
+6. Upload the ``newtheme.zip`` in the plone theme panel.
 
 
 Screenshots
